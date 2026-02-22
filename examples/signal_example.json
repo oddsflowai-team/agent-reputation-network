@@ -1,0 +1,12 @@
+{
+  "signal_id": "SIG-001",
+  "origin_agent": "agent.sportbot",
+  "context_hash": "0xabc123",
+  "confidence_metrics": { "probability": 0.63, "confidence_level": "medium" },
+  "risk_band": "moderate",
+  "verification_hash": "0xdef456",
+  "timestamp": "2026-02-22T09:00:00Z",
+  "challenge_window_hours": 24,
+  "reasoning_trace": ["Context assembled", "Edge detected", "Contract emitted"],
+  "source_refs": ["verification_log://2026-02-22/SIG-001"]
+}
