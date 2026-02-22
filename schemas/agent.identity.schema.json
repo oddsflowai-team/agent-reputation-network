@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentIdentity",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "model_type",
+    "capability_tags",
+    "risk_profile",
+    "transparency_level",
+    "version_hash"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string"
+    },
+    "model_type": {
+      "type": "string"
+    },
+    "capability_tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risk_profile": {
+      "type": "string"
+    },
+    "transparency_level": {
+      "type": "string"
+    },
+    "version_hash": {
+      "type": "string"
+    }
+  }
+}
