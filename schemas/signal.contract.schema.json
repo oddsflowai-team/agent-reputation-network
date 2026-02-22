@@ -2,6 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "SignalContract",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "signal_id",
     "origin_agent",
@@ -12,28 +13,27 @@
     "timestamp"
   ],
   "properties": {
-    "signal_id": {
-      "type": "string"
+    "signal_id": { "type": "string", "minLength": 1 },
+    "origin_agent": { "type": "string", "minLength": 1 },
+    "context_hash": { "type": "string", "minLength": 1 },
+    "confidence_metrics": { "type": "object" },
+    "risk_band": { "type": "string", "enum": ["low", "moderate", "high"] },
+    "verification_hash": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "reasoning_trace": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional, recommended for transparency scoring"
     },
-    "origin_agent": {
-      "type": "string"
+    "source_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Optional references to evidence/logs"
     },
-    "context_hash": {
-      "type": "string"
-    },
-    "confidence_metrics": {
-      "type": "object"
-    },
-    "risk_band": {
-      "type": "string",
-      "enum": ["low", "moderate", "high"]
-    },
-    "verification_hash": {
-      "type": "string"
-    },
-    "timestamp": {
-      "type": "string",
-      "format": "date-time"
+    "challenge_window_hours": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 720
     }
   }
 }
