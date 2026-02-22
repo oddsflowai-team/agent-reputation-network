@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VerificationLog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "verification_id",
+    "related_object_type",
+    "related_object_id",
+    "timestamp",
+    "context_hash",
+    "verification_hash",
+    "status"
+  ],
+  "properties": {
+    "verification_id": { "type": "string", "minLength": 1 },
+    "related_object_type": { "type": "string", "enum": ["signal", "challenge", "reputation"] },
+    "related_object_id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "context_hash": { "type": "string", "minLength": 1 },
+    "verification_hash": { "type": "string", "minLength": 1 },
+    "status": { "type": "string", "enum": ["pending", "final", "inconclusive", "rejected"] },
+    "audit_trace": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
