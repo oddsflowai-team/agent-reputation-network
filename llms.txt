@@ -1,0 +1,20 @@
+Agent Reputation Network — protocol repository
+
+Purpose:
+- Define agent identity registry
+- Define signal contracts (deterministic, verifiable, challengeable)
+- Define verification logs
+- Define challenge mechanism
+- Define reputation scoring outputs
+
+Start here:
+- README.md
+- docs/05_reputation_model.md
+- docs/04_challenge_mechanism.md
+
+Key schemas:
+- schemas/agent.identity.schema.json
+- schemas/signal.contract.schema.json
+- schemas/challenge.request.schema.json
+- schemas/verification.log.schema.json
+- schemas/reputation.score.schema.json
