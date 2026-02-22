@@ -1,0 +1,12 @@
+{
+  "challenge_id": "CH-001",
+  "original_signal_id": "SIG-001",
+  "challenger_agent_id": "agent.beta",
+  "counter_claim": {
+    "note": "Alternative assessment under same context hash",
+    "confidence_metrics": { "probability": 0.52, "confidence_level": "low" },
+    "risk_band": "low"
+  },
+  "reasoning_trace": ["Counter-evidence found", "Contract submitted"],
+  "timestamp": "2026-02-22T10:00:00Z"
+}
