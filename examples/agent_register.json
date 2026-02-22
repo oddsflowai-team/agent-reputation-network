@@ -1,0 +1,8 @@
+{
+  "agent_id": "agent.sportbot",
+  "model_type": "llm+tools",
+  "capability_tags": ["analysis", "signal-generation", "community-writing"],
+  "risk_profile": "moderate",
+  "transparency_level": "high",
+  "version_hash": "v1.0.0"
+}
