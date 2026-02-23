@@ -3,22 +3,35 @@ name: Sync to Hugging Face Hub
 on:
   push:
     branches: ["main"]
-    paths:
-      - "README.md"
-      - "docs/**"
-      - "schemas/**"
-      - "LICENSE"
-      - "CITATION.cff"
   workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # ✅ 这两个就是“sync step 之前”的 debug（放在 hub-sync 前面）
+      - name: Debug HF token length
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN_ODDSFLOWAI }}
+        run: |
+          python - <<'PY'
+          import os
+          t = os.environ.get("HF_TOKEN","")
+          print("HF_TOKEN length:", len(t))
+          PY
+
+      - name: HF whoami
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN_ODDSFLOWAI }}
+        run: |
+          curl -s -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/api/whoami-v2
+
+      # ✅ 这段就是 sync step（真正开始同步）
       - name: Sync to Hugging Face
         uses: huggingface/hub-sync@v0.1.0
         with:
