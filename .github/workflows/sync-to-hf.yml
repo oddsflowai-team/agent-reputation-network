@@ -2,7 +2,13 @@ name: Sync to Hugging Face Hub
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "schemas/**"
+      - "LICENSE"
+      - "CITATION.cff"
   workflow_dispatch:
 
 jobs:
@@ -10,12 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Sync to Hugging Face
-        uses: nateraw/huggingface-sync-action@v0.0.5
+        uses: huggingface/hub-sync@v0.1.0
         with:
           github_repo_id: ${{ github.repository }}
           huggingface_repo_id: oddsflowai-team/agent-reputation-network
           hf_token: ${{ secrets.HF_TOKEN }}
-          repo_type: "model"
-          # ✅ 不要传 private（避免 string → boolean 错误）
+          repo_type: model
+          private: false
+          subdirectory: ""
