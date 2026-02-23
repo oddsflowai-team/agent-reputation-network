@@ -18,4 +18,4 @@ jobs:
           huggingface_repo_id: oddsflowai-team/agent-reputation-network
           hf_token: ${{ secrets.HF_TOKEN }}
           repo_type: "model"
-          
+          # ✅ 不要传 private（避免 string → boolean 错误）
