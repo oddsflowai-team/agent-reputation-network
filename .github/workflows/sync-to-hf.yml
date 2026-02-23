@@ -1,0 +1,22 @@
+name: Sync to Hugging Face Hub
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to Hugging Face
+        uses: nateraw/huggingface-sync-action@v0.0.5
+        with:
+          github_repo_id: ${{ github.repository }}
+          huggingface_repo_id: Oddsflow-team/agent-reputation-network
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_type: "model"
+          private: false
+          subdirectory: ""
