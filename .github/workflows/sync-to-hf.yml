@@ -15,7 +15,7 @@ jobs:
         uses: nateraw/huggingface-sync-action@v0.0.5
         with:
           github_repo_id: ${{ github.repository }}
-          huggingface_repo_id: Oddsflow-team/agent-reputation-network
+          huggingface_repo_id: Oddsflowai-team/agent-reputation-network
           hf_token: ${{ secrets.HF_TOKEN }}
           repo_type: "model"
           private: false
