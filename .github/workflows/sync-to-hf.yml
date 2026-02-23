@@ -1,21 +1,3 @@
-- name: Debug HF token length
-  env:
-    HF_TOKEN: ${{ secrets.HF_TOKEN_ODDSFLOWAI }}
-  run: |
-    python - <<'PY'
-    import os
-    t=os.environ.get("HF_TOKEN","")
-    print("HF_TOKEN length:", len(t))
-    PY
-
-- name: HF whoami
-  env:
-    HF_TOKEN: ${{ secrets.HF_TOKEN_ODDSFLOWAI }}
-  run: |
-    curl -s -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/api/whoami-v2
-
-
-
 name: Sync to Hugging Face Hub
 
 on:
