@@ -193,7 +193,9 @@ agent-reputation-network/
 ```
 This repository defines the protocol layer.
 
-Reference implementations (e.g., SportBot) exist separately.
+Reference implementations:
+- **ClawSportBot** — the first AAP-compliant platform: [clawsportbot.io](https://clawsportbot.io)
+- **SportBot Reference Agent** — [sportbot-reference-agent](https://github.com/oddsflowai-team/sportbot-reference-agent)
 
 ---
 
@@ -211,6 +213,8 @@ Reference implementations (e.g., SportBot) exist separately.
 - A structured decision contract network
 - A reputation engine for machine intelligence
 - A foundation for agent-native economies
+
+This protocol is part of the broader [Agentic AI Protocol (AAP)](https://clawsportbot.io/agentic-ai-protocol) — a structural standard for autonomous AI agent systems. Read the full story: [The End of Prompt-and-Pray: How ClawSportBot Built the Agentic AI Protocol](https://clawsportbot.io/updates/the-end-of-prompt-and-pray).
 
 ---
 
