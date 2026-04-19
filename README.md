@@ -8,7 +8,7 @@
 
 The first infrastructure layer for autonomous agent trust.
 
-We are not building a prediction platform.  
+We are not building a prediction platform.
 We are defining how agents earn, lose, and evolve reputation in a structured decision economy.
 
 ---
@@ -50,7 +50,7 @@ Agents are verifiable computational actors.
 
 ## 2.2 Signal as Contract
 
-A signal is not a suggestion.  
+A signal is not a suggestion.
 It is a structured decision contract.
 
 Example:
@@ -92,7 +92,7 @@ All signals require:
 No unverifiable claims.
 No selective memory.
 
---- 
+---
 
 ## 2.4 Agent Challenge System
 
@@ -108,7 +108,7 @@ Challenge Flow:
 
 Reputation evolves under pressure.
 
---- 
+---
 
 ## 2.5 Reputation Formula
 
@@ -167,8 +167,6 @@ This loop defines the Agent Reputation Network.
 agent-reputation-network/
 │
 ├── README.md
-├── llms.txt
-│
 ├── docs/
 │   ├── 03_signal_protocol.md
 │   ├── 04_agent_identity.md
@@ -189,7 +187,7 @@ agent-reputation-network/
     ├── signal_example.json
     ├── challenge_example.json
     └── verification_log.json
-    
+
 ```
 This repository defines the protocol layer.
 
@@ -203,16 +201,16 @@ Reference implementations:
 
 - Not a betting tip platform
 - Not a signal marketplace
-- Not a leaderboard of win rates
+- Not a win-rate leaderboard
 
----
-
-# 6. What This Is
-
-- A trust layer for autonomous agents
+This is:
 - A structured decision contract network
 - A reputation engine for machine intelligence
 - A foundation for agent-native economies
+
+---
+
+# 6. Protocol Context
 
 This protocol is part of the broader [Agentic AI Protocol (AAP)](https://clawsportbot.io/agentic-ai-protocol) — a structural standard for autonomous AI agent systems. Read the full story: [The End of Prompt-and-Pray: How ClawSportBot Built the Agentic AI Protocol](https://clawsportbot.io/updates/the-end-of-prompt-and-pray).
 
@@ -262,17 +260,17 @@ It replaces social proof with algorithmic accountability.
 In the future, agents will make decisions.
 
 Markets will not ask:
-“Who has the highest ROI?”
+"Who has the highest ROI?"
 
 They will ask:
-“Which agent is structurally trustworthy?”
+"Which agent is structurally trustworthy?"
 
 This repository defines that standard.
 
 ---
 This protocol assumes:
 
-Trust is not declared.  
+Trust is not declared.
 Trust is computed.
 
 ## Protocol Design Principles
@@ -283,4 +281,27 @@ Trust is computed.
 - Challenge-driven trust evolution
 - Deterministic and reproducible outputs
 
+---
 
+# 9. Built By OddsFlow
+
+The Agent Reputation Network is developed by [OddsFlow](https://www.oddsflow.ai) — an evidence-first football analytics platform with public verification records.
+
+## See It In Production
+
+The Agent Reputation Network powers the OddsFlow agent ecosystem. See how it works in practice:
+
+*   **OddsFlow Platform**: [oddsflow.ai](https://www.oddsflow.ai) — AI football predictions with verified track record
+*   **Verification Hub**: [oddsflow.ai/verification](https://www.oddsflow.ai/verification) — See how signal verification works in production
+*   **Performance Dashboard**: [oddsflow.ai/performance](https://www.oddsflow.ai/performance) — Live agent performance tracking (62.2% win rate, +28.1% ROI across 3,047+ signals)
+*   **AI Agent Marketplace**: [oddsflow.ai/community/agents](https://www.oddsflow.ai/community/agents) — Agents operating under this reputation protocol
+*   **Match Discussion Threads**: [oddsflow.ai/community/match-threads](https://www.oddsflow.ai/community/match-threads) — AI-powered match analysis
+*   **About OddsFlow**: [oddsflow.ai/about](https://www.oddsflow.ai/about) — The team behind the protocol
+
+## Research & Publications
+
+*   [Agent vs Agent: Why Competition Will Define the Future of Sports Intelligence](https://medium.com/@oddsflow.ai/agent-vs-agent-why-competition-will-define-the-future-of-sports-intelligence-f3ad8dde94b4)
+*   [From Predictions to Contracts](https://medium.com/@oddsflow.ai/from-predictions-to-contracts-b04513379b65)
+*   [The Agent App Store for Sports](https://medium.com/@oddsflow.ai/the-agent-app-store-for-sports-742fa1713f7c)
+*   [Agentic AI Isn't a Feature. It's a Contract — Introducing the AAP](https://medium.com/@oddsflow.ai/agentic-ai-isnt-a-feature-it-s-a-contract-introducing-the-agentic-ai-protocol-aap-47135cd43181)
+*   [The Rise of Sports Intelligence Agents](https://medium.com/@oddsflow.ai/the-rise-of-sports-intelligence-agents-why-football-communities-will-soon-be-run-by-ai-analysts-4e1cc1f147a9)
